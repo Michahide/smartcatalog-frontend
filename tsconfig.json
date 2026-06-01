@@ -1,26 +1,135 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
+    // Type Checking
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    // "noUnusedLocals": true,
+    "noUnusedParameters": false,
     "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "strictBindCallApply": true,
+    "strictBuiltinIteratorReturn": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+    //Modules
+    // "allowArbitraryExtensions": null,
+    // "allowImportingTsExtensions": null,
+    // "allowUmdGlobalAccess": false,
+    // "baseUrl": "",
+    // "customConditions": [],
     "module": "esnext",
     "moduleResolution": "bundler",
+    // "noResolve": false,
+    // "noUncheckedSideEffectImports": false,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "incremental": true,
+    // "resolvePackageJsonExports": false,
+    // "resolvePackageJsonImports": false,
+    // "rewriteRelativeImportExtensions": false,
+    // "rootDir": "",
+    // "rootDirs": [],
+    // "typeRoots": [],
+    // "types": [],
+    // Emit
+    // "declaration": false,
+    // "declarationDir": "",
+    // "declarationMap": false,
+    // "downlevelIteration": false,
+    // "emitBOM": false,
+    // "emitDeclarationOnly": false,
+    // "importHelpers": false,
+    // "inlineSourceMap": false,
+    // "inlineSources": false,
+    // "mapRoot": "",
+    // "newLine": "lf",
+    "noEmit": true,
+    // "noEmitHelpers": false,
+    // "noEmitOnError": false,
+    // "outDir": "",
+    // "outFile": "",
+    // "preserveConstEnums": false,
+    // "removeComments": false,
+    // "sourceMap": false,
+    // "sourceRoot": "",
+    // "stripInternal": null,
+    // JavaScript Support
+    "allowJs": true,
+    "checkJs": false,
+    "maxNodeModuleJsDepth": 0, // default is 0
+    // Editor Support
+    // "disableSizeLimit": false,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    // Interop Constraints
+    // "allowSyntheticDefaultImports": null,
+    // "erasableSyntaxOnly": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    // "isolatedDeclarations": false,
+    "isolatedModules": true,
+    // "preserveSymlinks": false,
+    "verbatimModuleSyntax": true,
+    // Backwards Compatibility
+    // "charset": "",
+    // "importsNotUsedAsValues": "remove",
+    // "keyofStringsOnly": false,
+    // "noImplicitUseStrict": false,
+    // "noStrictGenericChecks": false,
+    // "preserveValueImports": false,
+    // "suppressExcessPropertyErrors": false,
+    // "suppressImplicitAnyIndexErrors": false,
+    // Language and Environment
+    // "emitDecoratorMetadata": null,
+    // "experimentalDecorators": null,
+    "jsx": "react-jsx",
+    // "jsxFactory": "React.createElement",
+    // "jsxFragmentFactory": "React.Fragment",
+    // "jsxImportSource": "react",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    // "libReplacement": true,
+    // "moduleDetection": "auto",
+    // "noLib": false,
+    // "reactNamespace": "React",
+    "target": "ES2017",
+    // "useDefineForClassFields": false,
+    // Compiler Diagnostics
+    // "diagnostics": null,
+    // "extendedDiagnostics": false,
+    // "generateCpuProfile": "profile.cpuprofile",
+    // "listEmittedFiles": false,
+    // "listFiles": false,
+    // "noCheck": false,
+    // "traceResolution": false,
+    // Projects
+    // "composite": true,
+    // "disableReferencedProjectLoad": null,
+    // "disableSolutionSearching": null,
+    // "disableSourceOfProjectReferenceRedirect": null,
+    "incremental": true,
+    // "tsBuildInfoFile": ".tsbuildinfo",
+    // Output Formatting
+    "noErrorTruncation": false,
+    // "preserveWatchOutput": null,
+    "pretty": true,
+    //Completeness
+    "skipLibCheck": true
+    // Watch Options
+    // "assumeChangesOnlyAffectDirectDependencies": null
   },
   "include": [
     "next-env.d.ts",
