@@ -303,17 +303,20 @@ export default function SearchView() {
   const [loading, setLoading] = useState(false);
   const { data: products } = useProducts();
 
-  const doSearch = useCallback((q: string) => {
-    if (!q.trim()) {
-      setResults([]);
-      return;
-    }
-    setLoading(true);
-    setTimeout(() => {
-      setResults(scoreProducts(q));
-      setLoading(false);
-    }, 320);
-  }, []);
+  const doSearch = useCallback(
+    (q: string) => {
+      if (!q.trim()) {
+        setResults([]);
+        return;
+      }
+      setLoading(true);
+      setTimeout(() => {
+        setResults(scoreProducts(q, products?.data));
+        setLoading(false);
+      }, 320);
+    },
+    [products],
+  );
 
   useEffect(() => {
     const q = searchParams.get("q");
