@@ -61,15 +61,18 @@ export default function ChatWindow({ compact = false, systemContext }: Props) {
 
         const token = localStorage.getItem("auth_token");
 
-        const res = await fetch("http://localhost:8000/api/chat", {
-          body: JSON.stringify({ context: systemContext, messages: history }),
-          headers: {
-            Accept: "application/json",
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
+        const res = await fetch(
+          `${process.env["NEXT_PUBLIC_API_URL"] ?? "http://localhost:8000"}/api/chat`,
+          {
+            body: JSON.stringify({ context: systemContext, messages: history }),
+            headers: {
+              Accept: "application/json",
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+            method: "POST",
           },
-          method: "POST",
-        });
+        );
 
         if (!res.ok) {
           const body = await res.json().catch(() => null);
